@@ -1,0 +1,44 @@
+<!DOCTYPE html>	
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body class="en" id="body">
+    <h1 id="hi">hello</h1>
+        <script>
+            var language = {
+                eng:
+                {
+                    welcome : 'hello'
+                },
+                arb:
+                {
+                    welcome: 'مرحبا'
+                },
+                esp:
+                {
+                    welcome:'holla'
+                }
+            };
+            var hi = document.getElementById('hi')
+            if(window.location.hash){
+                if(window.location.hash == '#en')
+                {
+                    hi.textContent = language.eng.welcome;
+                }
+                if(window.location.hash == '#ar')
+                {
+                    hi.textContent = language.arb.welcome;
+                }
+                if(window.location.hash == '#sp')
+                {
+                    hi.textContent = language.esp.welcome;
+                }
+            };
+        </script>
+</body>
+</html>
